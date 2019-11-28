@@ -1,0 +1,23 @@
+version: "3.2"
+services:
+
+  apache1:
+    
+    build: ./proxy
+    volumes:
+      - ./proxy/dummy.tkinteractive.com/public_html/:/var/www/dummy.tkinteractive.com/public_html/
+
+    container_name: apache-php1
+    restart: always
+#    depends_on:
+#      - reverseproxy
+
+  reverseproxy:
+    build: .
+    ports: 
+      - 80:80
+      - 3307:3306
+    container_name:  reverseproxy_container
+    restart: always
+
+
