@@ -12,7 +12,6 @@ COPY ./hariom.tkinteractive.com/public_html/ /var/www/hariom.tkinteractive.com/p
 
 COPY ./hariom.tkinteractive.com/01.conf /etc/apache2/sites-available/
 
-
+RUN apt-get update
 RUN a2ensite 01.conf
 RUN a2dissite 000-default.conf
-RUN apt-get update
