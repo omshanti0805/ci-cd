@@ -6,7 +6,7 @@ $(document).ready(function(){
     app_html+="<div class='container'>";
  
         app_html+="<div class='page-header'>";
-            app_html+="<h1 id='page-title'>Read Products</h1>";
+            app_html+="<h1 id='page-title'>Read Products New</h1>";
         app_html+="</div>";
  
         // this is where the contents will be shown.
