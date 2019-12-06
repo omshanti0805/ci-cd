@@ -18,6 +18,7 @@ services:
     restart: always
     
   reverseproxy:
+    image: nginx_rev:v1
     build: .
     ports: 
       - 80:80
