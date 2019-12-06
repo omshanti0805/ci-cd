@@ -1,7 +1,6 @@
-FROM php:7.2-apache
+FROM php:5.6-apache
 
 RUN apt-get update 
-#RUN apt-cache search php5.6
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 RUN mkdir -p /var/www/hariom.tkinteractive.com/public_html

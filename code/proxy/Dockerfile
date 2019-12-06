@@ -1,7 +1,6 @@
-FROM php:5.6-apache
+FROM php:7.2-apache
 
 RUN apt-get update 
-RUN apt-cache search php7.2
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 RUN mkdir -p /var/www/dummy.tkinteractive.com/public_html
