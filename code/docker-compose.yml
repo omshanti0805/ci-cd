@@ -7,19 +7,14 @@ services:
       - ./proxy/dummy.tkinteractive.com/public_html/:/var/www/dummy.tkinteractive.com/public_html/
     container_name: apache-php1
     restart: always
-    depends_on:
-      - reverseproxy
-
+    
   apache2:
     build: ./proxy2
     volumes:
       - ./proxy2/hariom.tkinteractive.com/public_html/:/var/www/hariom.tkinteractive.com/public_html/
     container_name: apache-php2
     restart: always
-    depends_on:
-      - reverseproxy
-
-
+    
   reverseproxy:
     build: .
     ports: 
@@ -27,5 +22,6 @@ services:
       - 3307:3306
     container_name:  reverseproxy_container
     restart: always
+
 
 
